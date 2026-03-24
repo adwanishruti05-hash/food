@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery Landing Page</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #574b4049;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #e70b2f18;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(30px);
+     font-weight: bolder;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: #f83b8a;
+     transform: scale(1.1);
+}
+.logo{
+    width: 60px;
+    height:60px;
+}
+.hero-food {
+  background: url(image/bg.jpg);
+  text-align: center;
+  padding: 100px 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.text{
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color:#333
+}
+.hero-food h1 {
+    font-size: 46px;
+}
+
+.hero-food p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.order-btn {
+    margin-top: 25px;
+    padding: 14px 30px;
+    border: none;
+    background: rgb(87, 27, 27);
+    color: #f8f8f8;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.order-btn:hover {
+    transform: scale(1.1);
+}
+
+.menu-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.menu-card {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.price {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.contact{
+    text-align: center;
+    justify-content: center;
+            font-size: 18px;
+            margin: 10px 0;
+            cursor: pointer;
+        
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+
+    .hero-food h1 {
+        font-size: 30px;
+    }
+
+    .menu-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer{
+         flex-direction: column;
+        align-items: center;
+    }
+     .menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #007BFF;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+      .menu-toggle {
+        display: block;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div style="display: flex;">
+    <img class="logo" src="image/food-shopping-logo-template-design_460848-10299.avif" alt="">
+<h2 style="margin-top: 15px;">FoodExpress</h2>
+</div>
+<div>
+<a href="#">Home</a>
+<a href="#">Menu</a>
+<a href="#">Offers</a>
+<a href="#contact">Contact</a>
+</div>
+ <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+</div>
+
+
+<section class="hero-food">
+<div class="text">
+<h1>Delicious Food Delivered Fast</h1>
+
+<p>Order your favorite meals anytime, anywhere</p>
+
+<button class="order-btn">
+Order Now
+</button>
+</div>
+</section>
+
+<section class="menu-section">
+
+<h2>Popular Dishes</h2>
+
+<div class="menu-cards">
+
+<div class="menu-card">
+<img src="image/classic-cheese-pizza.webp" alt="Pizza">
+<h3>Cheese Pizza</h3>
+<p class="price">₹199</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/sand.jpeg" alt="sandwich">
+<h3>sandwich</h3>
+<p class="price">₹89</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/burg.jpg" alt="Burger">
+<h3>Veg Burger</h3>
+<p class="price">₹99</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/White-Sauce-Pasta (1).jpg" alt="Pasta">
+<h3>White Sauce Pasta</h3>
+<p class="price">₹149</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/maggie.jpeg" alt="maggie">
+<h3>cheese corn maggie</h3>
+<p class="price">₹79</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/brownie.jpeg" alt="brownie">
+<h3>brownie</h3>
+<p class="price">₹129</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/samosa-recipe-500x375.jpg" alt="samosa">
+<h3>samosa</h3>
+<p class="price">₹20</p>
+<button class="order-btn">Order</button>
+</div>
+
+<div class="menu-card">
+<img src="image/fries.jpg" alt="french fries">
+<h3>French Fries</h3>
+<p class="price">₹90</p>
+<button class="order-btn">Order</button>
+</div>
+
+</div>
+
+</section>
+<section class="contact">
+    <h1>Contact</h1>
+    
+    <div class="contact">
+        📞 Call: +91 9876543210
+    </div>
+
+    <div class="contact">
+        ✉️ Email: foodexpress@gmail.com
+    </div>
+
+</section><br>
+
+<div class="footer">
+
+<p>© 2026 FoodExpress | All Rights Reserved</p>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
